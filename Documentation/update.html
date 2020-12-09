@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <title>Next Hour - Movie Tv Show &amp; Video Subscription Portal Cms Mobile App</title>
+    
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Bootstrap 4 Template For Software Startups">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.png"> 
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome JS-->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/css/atom-one-dark.min.css">
+
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
+
+</head> 
+
+<body class="docs-page">    
+    <header class="header fixed-top">	    
+        <div class="branding docs-branding">
+            <div class="container-fluid position-relative py-2 main-header">
+                <div class="docs-logo-wrapper">
+					<button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible mr-2 d-xl-none" type="button">
+	                    <span></span>
+	                    <span></span>
+	                    <span></span>
+	                </button>
+	                <div class="site-logo"><a class="navbar-brand" href="index.html"><img class="logo-icon mr-2" src="assets/images/logo.png" alt="logo"><span class="logo-text"></a></div>    
+                </div><!--//docs-logo-wrapper-->
+	            <div class="docs-top-utilities d-flex justify-content-end align-items-center">
+	            	<div class="top-search-box d-none d-lg-flex">
+		                <form class="search-form">
+				            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+				            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+				        </form>
+	                </div>
+	                <div class="docs-top-menu">
+	                	<ul>
+	                		<li class="docs-top-menu-item" title="Documentation"><a href="index.html">Docs</a></li>
+	                		<li class="docs-top-menu-item" title="About-Us"><a href="https://mediacity.co.in/index.html" target="_blank">About Us</a></li>
+	                		<li class="docs-top-menu-item" title="Our-Services"><a href="https://mediacity.co.in/contact.html" target="_blank">Contact Us</a></li>
+	                	</ul>
+	                </div><!--//social-list-->
+		            <a href="https://codecanyon.net/user/media-city/portfolio" class="btn btn-primary d-none d-lg-flex" target="_blank">Portfolio</a>
+
+	            </div><!--//docs-top-utilities-->
+
+            </div><!--//container-->
+            <div id="navbar">
+			  <a href="introduction.html">Introduction</a>
+			  <a href="installation.html">Installation</a>
+			  <a href="faq.html">FAQ</a>
+			  <a href="changelog.html">Changelog</a>
+			  <a class="active" href="update.html">Update Process</a>
+			  <a href="source.html">Source &amp; Credit</a>
+			  <a href="conclusion.html">Conclusion</a>
+			</div>
+        </div><!--//branding-->
+
+    </header><!--//header-->
+
+    <div class="docs-wrapper">
+	    <div id="docs-sidebar" class="docs-sidebar">
+		    <div class="top-search-box d-lg-none p-3">
+                <form class="search-form">
+		            <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+		            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+		        </form>
+            </div>
+		    <nav id="docs-nav" class="docs-nav navbar section-divider">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title"><a class="nav-link scrollto active" href="#section-1"><span class="theme-icon-holder mr-2"><i class="fas fa-map-signs"></i></span>Update Process</a></li>
+				     <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Update 3.0.1</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Update 2.8</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-1-2">Update 2.7</a></li>				   
+			    </ul>
+			</nav><!--//docs-nav-->
+	    </div><!--//docs-sidebar-->
+
+	    <div class="docs-content section-divider">
+		    <div class="container">
+			    <article class="docs-article" id="section-1">
+				    <header class="docs-header">
+					    <h1 class="docs-heading">Update Process</h1>
+					</header>
+
+				    <section class="docs-section" id="item-1-1">
+						<h5><b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b></h5>
+						<p>Copy All files and paste to you folder replace file. Only be careful when replace files in public folder. Any user customize design and code please do not update. For database don not import all tables.</p>
+						
+						
+						<section class="docs-section" id="item-1-2">
+						<h5><b>Update Version 3.0.1<br/></b></h5>
+						
+						<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b>
+						<p>2.8.2 Version Required then Copy All files of folder and paste to you folder and replace files, only be careful when replace files in public folder, don't copy<code> .env </code>file. Any user customize design and code please do not update.</p>
+						<p>After replacing the files successfully then open your <code>.env</code> file and paste the following code at bottom
+<pre>
+	<code>
+AMAZON_LOGIN_ID=
+
+AMAZON_LOGIN_SECRET=
+
+AMAZON_LOGIN_REDIRECT=
+
+NOCAPTCHA_SITEKEY=
+
+NOCAPTCHA_SECRET=
+
+IS_INSTALLED=0
+	</code>
+</pre>then <b>goto yourdomain.com</b>. If your domain contain public then goto <b>yourdomain.com/public</b>. If you are existing user then click on <b>I'm Existing user</b>, then fill your domain name and purchase code check the agreement box and click on update. After the update completion you will be redirected to yourdomain with a successful update message.</p>
+						
+						<p><b>You successfully upgraded to version 3.0.1.</b></p>
+						
+
+
+						<h5><b>Update Version 2.8.2<br/></b></h5>
+						
+						<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b>
+						<p>First Update Script to 2.8.1 then Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder, don't copy <code>.env</code> file. Database need some columns and tables.</p>
+						
+						<h5><b>Update Version 2.8.1<br/></b></h5>
+						
+						<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b>
+						<p>First Update Script to 2.8 then Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder, don't copy <code>.env</code> file. Database need some columns and tables.</p>
+						<table border="1">
+							<tr>
+								<td>01.</td>
+								<td>Create New Tables <b>multiplescreens</b><br/>
+								<b>Note: </b>You Can Import Table From <b>Database -> Old Users Update </b> nexthourupdate_2_8_1.sql.<br/>
+							</tr>
+							<tr>
+								<td>02.</td>
+								<td>Add <b>download</b> column in <b>package</b> table. Make column datatype tiniyint (1), Default 0.<br/>
+								Add <b>downloadlimit</b> column in <b>package</b> table. Make column datatype bigint (20), Nullable.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>
+							<tr>
+								<td>03.</td>
+								<td>Add <b>razorpay_payment</b> column in <b>config</b> table. Make column datatype tiniyint (1), Default 1.<br/>								
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>	
+						</table>
+						<br/>
+						<p>Add Variables in .env file:- <p>
+<pre>
+	<code>
+RAZOR_PAY_KEY=
+RAZOR_PAY_SECRET=
+	</code>
+</pre>
+<p><b>Note:- </b>Multiple screen not available for stripe payment gateways<p>
+						<br/>
+						<p>Please make sure you select PHP version 7.2.<br/></p>
+						<br/>
+						<h5><b>Update Version 2.8<br/></b></h5>
+						
+						<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b>
+						<p>First Update Script to 2.7 then Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder, don't copy <code>.env</code> file. Database need some columns and tables.</p>
+						<table border="1">
+							<tr>
+								<td>01.</td>
+								<td>Edit <b>created_at, updated_at</b> column in <b>package_menu</b> table. Make column datatype timestamp and keep length field empty. Make column nullable, default NULL.<br/>
+								<b>Note: </b>You need to edit it Manually.<br/>
+								</td>
+							</tr>
+							<tr>
+								<td>02.</td>
+								<td>Create New Tables <b>cps_cpp</b><br/>
+								<b>Note: </b>You Can Import Table From <b>Database -> Old Users Update </b> nexthourupdate_2.8.sql.<br/>
+							</tr>
+						</table>
+						<br/>
+						<p>Please make sure you select PHP version 7.2.<br/></p>
+						<br/>
+						<h5><b>Update Version 2.7<br/></b></h5>
+						<b>Note: Before Update Take Backup of All Files And Database. Make .zip file and download all file, Go To phpmyadmin and select your database and export it.<br/></b>
+						<p>First Update Script to 2.5 then Copy All files of folder and paste to you folder replace file, only be careful when replace files in public folder. Database need some columns and tables.</p>
+						<table border="1">
+							<tr>
+								<td>01.</td>
+								<td>Drop the tables <b>pricing_texts, front_slider_updates </b> then add the tables with same name.<br/>
+								</td>
+							</tr>
+							<tr>
+								<td>02.</td>
+								<td>Create New Tables <b>user_ratings, watch_histories, movie_comments, movie_subcomments, jobs, cp_cp_callback_addresses, cp_cp_conversions, cp_cp_deposits, cp_cp_ipns, cp_cp_log, cp_cp_mass_withdrawals, cp_cp_transactions, cp_cp_transfers, cp_cp_withdrawals, comments, subcomments, adsenses, package_menu, notifications, multiplescreens, pricing_texts, front_slider_updates, blogs, likes, donater_lists.</b><br/>
+								<b>Note: </b>You Can Import Table From <b>Database -> Old Users Update </b> nexthourupdate_2.7.sql.<br/>
+							</tr>
+							<tr>
+								<td>03.</td>
+								<td>Add <b>age</b> column in <b>users</b> table. Make column datatype int(11), nullable. Default 0.<br/>
+								Add <b>is_blocked</b> column in <b>users</b> table. Make column datatype tinyint(1), nullable. Default 0.<br/>
+								Add <b>verifyToken, age</b> column in <b>users</b> table. Make column datatype varchar. Make column NULL<br/>
+								Add <b>is_assistant, is_blocked</b> column in <b>users</b> table. Make column datatype tinyint. Make column NULL. Default 0.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>							
+							<tr>
+								<td>04.</td>
+								<td>Add columns in <b>configs</b> table.<br/><br/>
+								<table class="config-table">
+									<tr>
+										<th><b> Column Name </b></th>
+										<th><b> Datatype </b></th>
+										<th><b> Nullable </b></th>
+										<th><b> Default </b></th>
+									</tr>
+									<tr>
+										<td>free_sub</td>
+										<td>int(11)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>free_days</td>
+										<td>int(11)</td>
+										<td>No</td>
+										<td>NULL</td>
+									</tr>
+									<tr>
+										<td>download</td>
+										<td>int(11)</td>
+										<td>No</td>
+										<td>NULL</td>
+									</tr>
+									<tr>
+										<td>is_playstore</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>is_appstore</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>playstore</td>
+										<td>varchar(200)</td>
+										<td>Yes</td>
+										<td>NULL</td>
+									</tr>
+									<tr>
+										<td>appstore</td>
+										<td>varchar(200)</td>
+										<td>Yes</td>
+										<td>NULL</td>
+									</tr>
+									<tr>
+										<td>color</td>
+										<td>varchar(100)</td>
+										<td>Yes</td>
+										<td>NULL</td>
+									</tr>
+									<tr>
+										<td>color_dark</td>
+										<td>tinyint(1)</td>
+										<td>Yes</td>
+										<td>NULL</td>
+									</tr>
+									<tr>
+										<td>user_rating</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>comments</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>braintree</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>paystack</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>remove_landing_page</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>coinpay</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>aws</td>
+										<td>tinyint(1)</td>
+										<td>Yes</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>blogs</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>age_restriction</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>withlogin</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>catlog</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>verify_email</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>paytm_test</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>fb_login</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>gitlab_login</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>google_login</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>donation</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>bankdetails</td>
+										<td>tinyint(1)</td>
+										<td>No</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>donation_link</td>
+										<td>varchar (255)</td>
+										<td>Yes</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>account_no</td>
+										<td>varchar (255)</td>
+										<td>Yes</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>branch</td>
+										<td>varchar (255)</td>
+										<td>Yes</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>ifsc_code</td>
+										<td>varchar (255)</td>
+										<td>Yes</td>
+										<td>0</td>
+									</tr>
+									<tr>
+										<td>bank_name</td>
+										<td>varchar (255)</td>
+										<td>Yes</td>
+										<td>0</td>
+									</tr>									
+								</table><br/>
+							</tr>	
+							<tr>
+								<td>05.</td>
+								<td>Add <b> biography</b> datatype<b> long text</b>,<b> place_of_birth</b> datatype<b> medium text</b>,<b> DOB</b> datatype<b> date</b> columns in <b> actors</b> table. Make column nullable. Default NULL.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>	
+							<tr>
+								<td>06.</td>
+								<td>Add <b> biography</b> datatype<b> long text</b>,<b> place_of_birth</b> datatype<b> medium text</b>,<b> DOB</b> datatype<b> date</b> columns in <b> directors</b> table. Make column nullable. Default NULL.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/> 
+								</td>
+							</tr>
+							<tr>
+								<td>07.</td>
+								<td>Add <b>upload_video</b> column in <b>movies</b> table. Make column datatype varchar(100). Make column nullable, default NULL.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>
+							<tr>
+								<td>08.</td>
+								<td>Add <b>live , status</b> column in <b>movies</b> table. Make column datatype tinyint. Make column nullable, default 0.<br/>
+								Add <b>created_by</b> column in <b>movies</b> table. Make column datatype int (11). Make column nullable, default 0.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>	
+							<tr>
+								<td>09.</td>
+								<td>Add <b>thumbnail</b> column in <b>episodes</b> table. Make column datatype varchar(200). Make column nullable, default NULL.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>		
+							<tr>
+								<td>10.</td>
+								<td>In <b>Header Translation's</b> table insert four rows <br/>The Key Column in first row is <b>Free Trail</b>, second is <b>Free Trail Text</b>, third is <b>watch history</b>, fourth is <b>average rating</b>. Then click on Insert. Keep the value fields NULL. 
+								</td>
+							</tr>
+							<tr>
+								<td>11.</td>
+								<td>In <b>Popover Translation's</b> table insert one row <br/>The Key Column in first row is <b>Download</b>. Then click on Insert. Keep the value fields NULL. 
+								</td>
+							</tr>
+							<tr>
+								<td>12.</td>
+								<td>In <b>home Translation's</b> table insert three rows <br/>The Key Column in first row is <b>Actor DOB</b>, second is <b>Actor Place Of Birth</b>, third is <b>TMDB Rating</b> and keep the status 1. Then click on Insert. Keep the value fields NULL. 
+								</td>
+							</tr>
+							<tr>
+								<td>13.</td>
+								<td>Add <b>upload_video</b> column in <b>video_links</b> table. Make column datatype LONGTEXT and keep length field empty. Make column nullable, default NULL.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>														
+							<tr>
+								<td>14.</td>
+								<td>Add <b>auto_play, speed, thumbnail, info_window, loop_video, is_resume</b> column in <b>player_settings</b> table. Make column datatype tinyint. Default 1.Make column NULL.<br/>
+								Add <b>skin</b> column in <b>player_settings</b> table. Make column datatype varchar. Make column NULL, length 111.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/> 
+								</td>
+							</tr>							
+							<tr>
+								<td>15.</td>
+								<td>Add <b>fetch_by, status</b> column in <b>tv_series</b> table. Make column datatype varchar. Make column NULL<br/>
+								Add <b>created_by</b> column in <b>tv_series</b> table. Make column datatype int (11). Make column NULL<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>								
+							<tr>
+								<td>16.</td>
+								<td>Add <b>status</b> column in <b>users</b> table. Make column datatype tinyint. Make column datatype tinyint. Default 0.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>	
+							<tr>
+								<td>17.</td>
+								<td>Add <b>currency_symbol</b> column in <b>packages</b> table. Make column datatype varchar. Make column NULL<br/>
+								add <b>screens</b> column in <b>packages</b> table. Make column datatype int(11). Make column NULL. Default 1.<br/>
+								<b>Note: </b>You Can not Import Columns, You need to create it Manually.<br/>
+								</td>
+							</tr>		
+							<tr>
+								<td>18.</td>
+								<td>In <b>Header Translation's</b> table insert three rows <br/>The Key Column in first row is <b>watchlist</b>, second is <b>register</b>, third is <b>donation</b>. Then click on Insert. Keep the value fields NULL. 
+								</td>
+							</tr>
+							
+							<tr>
+								<td>19.</td>
+								<td>Update Your Packages to display Currency at subscribe packages.<br/>
+								</td>
+							</tr>
+							<tr>
+								<td>20.</td>
+								<td>In Project folder delete <b>trustedproxy.php</b> from <b>config</b> folder.
+								</td>
+							</tr>
+						</table><br/>
+
+						<h5><b>Update Version 2.5.1<br/></b></h5>
+						<p>No need to update web version.</p>
+
+					</section><!--//section-->
+
+				</article>
+
+			    <footer class="footer">
+				    <div class="container text-center py-5">
+				        <small class="copyright">Designed with <i class="fas fa-heart" style="color: #fb866a;"></i> by <a class="theme-link" href="https://mediacity.co.in/index.html" target="_blank">mediacity</a></small>
+				        <ul class="social-list list-unstyled pb-4 mb-0">
+						    <li class="list-inline-item"><a href="https://twitter.com/mediacityin" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="https://www.youtube.com/c/mediacitycoin/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+				            <li class="list-inline-item"><a href="https://www.behance.net/media-city" target="_blank"><i class="fab fa-behance"></i></i></a></li>
+				            <li class="list-inline-item"><a href="https://www.facebook.com/mediacityindia/" target="_blank"><i class="fab fa-facebook-f fa-fw"></i></a></li>
+				            <li class="list-inline-item"><a href="https://dribbble.com/mediacity" target="_blank"><i class="fab fa-dribbble"></i></a></li>
+				        </ul><!--//social-list-->
+				    </div>
+			    </footer>
+		    </div> 
+	    </div>
+    </div><!--//docs-wrapper-->
+	
+    <!-- Javascript -->          
+    <script src="assets/plugins/jquery-3.4.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+
+    <!-- Page Specific JS -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script src="assets/js/highlight-custom.js"></script> 
+    <script src="assets/plugins/jquery.scrollTo.min.js"></script>
+    <script src="assets/plugins/lightbox/dist/ekko-lightbox.min.js"></script> 
+    <script src="assets/js/docs.js"></script> 
+
+</body>
+</html> 
+

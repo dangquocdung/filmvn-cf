@@ -1,0 +1,61 @@
+import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'package:nexthour/common/apipath.dart';
+import 'package:nexthour/models/app_model.dart';
+import 'package:nexthour/models/block.dart';
+import 'package:nexthour/models/plans_model.dart';
+
+class AppConfig with ChangeNotifier {
+  AppModel appModel;
+  List<Block> slides = [];
+  List<Plan> planList = [];
+
+  Future<AppModel> getHomeData(BuildContext context) async {
+   try {
+     final response = await http.get(APIData.homeDataApi, headers: {
+       "Accept" : "application/json"
+     });
+     if(response.statusCode == 200){
+       appModel = AppModel.fromJson(json.decode(response.body));
+       slides = List.generate(appModel.blocks.length, (index) => Block(
+         id: appModel.blocks[index].id,
+         image: appModel.blocks[index].image,
+         heading: appModel.blocks[index].heading,
+         detail: appModel.blocks[index].detail,
+         position: appModel.blocks[index].position,
+         buttonText: appModel.blocks[index].buttonText,
+       ));
+       planList = List.generate(
+           appModel.plans.length,
+               (index) => Plan(
+             id: appModel.plans[index].id,
+             name: appModel.plans[index].name,
+             currency: appModel.plans[index].currency,
+             currencySymbol: appModel.plans[index].currencySymbol,
+             amount: appModel.plans[index].amount,
+             interval: appModel.plans[index].interval,
+             intervalCount: appModel.plans[index].intervalCount,
+             trialPeriodDays: appModel.plans[index].id,
+             status: appModel.plans[index].id,
+             screens: appModel.plans[index].id,
+             deleteStatus: appModel.plans[index].id,
+             download: appModel.plans[index].id,
+             downloadlimit: appModel.plans[index].id,
+             updatedAt: appModel.plans[index].updatedAt,
+             createdAt: appModel.plans[index].createdAt,
+             planId: appModel.plans[index].planId,
+             pricingTexts: appModel.plans[index].pricingTexts,
+           ));
+       planList.removeWhere((element) => element.status == 0);
+     }else{
+       throw "Can't get home data";
+     }
+     notifyListeners();
+     return appModel;
+   } catch (error){
+     throw error;
+   }
+  }
+}
